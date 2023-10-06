@@ -56,7 +56,6 @@ scipy==1.10.1
 seaborn==0.13.0
 setuptools-scm==8.0.4
 six==1.16.0
-sklearn==0.0.post9
 sympy==1.12
 termcolor==2.3.0
 threadpoolctl==3.2.0
