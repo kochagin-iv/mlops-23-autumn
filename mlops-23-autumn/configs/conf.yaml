@@ -1,0 +1,13 @@
+path_train_dataset: mlops-23-autumn/datasets/human_activity_predictions/train.csv
+
+path_test_dataset: mlops-23-autumn/datasets/human_activity_predictions/test.csv
+
+best_model_file: mlops-23-autumn/best_model.pt
+
+graphics_path:
+  train: mlops-23-autumn/graphics/train
+  test: mlops-23-autumn/graphics/test
+
+path_answers: mlops-23-autumn/answers/human_activity_predictions
+
+number_epochs: 22
