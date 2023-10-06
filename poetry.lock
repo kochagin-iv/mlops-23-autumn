@@ -1613,16 +1613,6 @@ files = [
 ]
 
 [[package]]
-name = "sklearn"
-version = "0.0.post9"
-description = "deprecated sklearn package, use scikit-learn instead"
-optional = false
-python-versions = "*"
-files = [
-    {file = "sklearn-0.0.post9.tar.gz", hash = "sha256:1ff5864cf30489ee48a014fe8f4320d7bb59592392a4ef52ae9d7a37942615ac"},
-]
-
-[[package]]
 name = "sympy"
 version = "1.12"
 description = "Computer algebra system (CAS) in Python"
@@ -1904,4 +1894,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.12"
-content-hash = "e13f157b54a3ea31cd641a6b945f1410994c96c0fe7ed795e574df582e02e581"
+content-hash = "71de2dea9fdec7f50266465ceed3e39f28d72374997fc032bdea934e9f9ec4da"
