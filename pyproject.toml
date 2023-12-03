@@ -77,6 +77,8 @@ nodeenv = "1.8.0"
 platformdirs = "3.11.0"
 pre-commit = "3.4.0"
 virtualenv = "20.24.5"
+dvc = "^3.30.3"
+dvc-gdrive = "^2.20.0"
 
 [tool.black]
 line-length = 90
