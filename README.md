@@ -1,6 +1,8 @@
 # mlops-23-autumn
 
-Project for my tasks in mlops course, autumn 2023
+Project for my tasks in mlops course, autumn 2023 На данный момент не
+реализована logging и часть с onnx mlflow, в ближайшее время будет добавлена, в
+течение 1-2 дней после дедлайна :(
 
 Порядок работы с репозиторием
 
@@ -9,8 +11,10 @@ Project for my tasks in mlops course, autumn 2023
 3. `poetry install`
 4. `pre-commit install`
 5. `pre-commit run -a`
-6. `python3 mlops-23-autumn/train.py` - обучение модели
-7. `python3 mlops-23-autumn/infer.py` - получение предсказаний
+6. `dvc pull` - скачивание данных из gdrive, данные можно найти по ссылке
+   https://drive.google.com/drive/u/0/folders/1xc5tTNLL_2oA1XKe3jZ0AKVJuy7xG2xz
+7. `python3 mlops-23-autumn/train.py` - обучение модели
+8. `python3 mlops-23-autumn/infer.py` - получение предсказаний
 
 Структура проекта:
 
