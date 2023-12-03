@@ -1,18 +1,17 @@
+import hydra
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import torch
-import yaml
 from mlxtend.plotting import plot_confusion_matrix
 from model import make_model
+from omegaconf import DictConfig
 from sklearn.metrics import classification_report, confusion_matrix
 from train import prepare_data
 
 
-def main():
-    with open("mlops-23-autumn/configs/conf.yaml", "r") as file:
-        config = yaml.safe_load(file)
-
+@hydra.main(config_path="configs", config_name="conf", version_base="1.3")
+def main(config: DictConfig):
     _, _, X_test, _, _, y_test = prepare_data(
         config["path_train_dataset"], config["path_test_dataset"]
     )

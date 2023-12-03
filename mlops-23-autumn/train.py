@@ -1,9 +1,10 @@
+import hydra
 import matplotlib.pyplot as plt
 import pandas as pd
 import torch
 import torch.nn.functional as F
-import yaml
 from model import make_model
+from omegaconf import DictConfig
 from pylab import rcParams
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
@@ -45,9 +46,8 @@ def prepare_data(train_file, test_file):
     return X_train, X_val, X_test, y_train, y_val, y_test
 
 
-def main():
-    with open("mlops-23-autumn/configs/conf.yaml", "r") as file:
-        config = yaml.safe_load(file)
+@hydra.main(config_path="configs", config_name="conf", version_base="1.3")
+def main(config: DictConfig):
     X_train, X_val, _, y_train, y_val, _ = prepare_data(
         config["path_train_dataset"], config["path_test_dataset"]
     )

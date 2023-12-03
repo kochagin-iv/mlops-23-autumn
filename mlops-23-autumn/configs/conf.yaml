@@ -1,3 +1,7 @@
+hydra:
+  run:
+    dir: ./.logs/hydra/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
 path_train_dataset: mlops-23-autumn/datasets/human_activity_predictions/train.csv
 
 path_test_dataset: mlops-23-autumn/datasets/human_activity_predictions/test.csv
