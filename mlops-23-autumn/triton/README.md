@@ -45,3 +45,19 @@ https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphone
 | 100                          | 3077.37 infer/sec | 2598 usec |
 | 500                          | 3671.47 infer/sec | 2178 usec |
 | 1000                         | 3724.43 infer/sec | 2147 usec |
+
+Структура проекта:
+
+```
+    .
+    └── triton
+        ├── model_repository/onnx-human-activity
+        |   └── 1 - сюда скопировать onnx модели
+            └── config.pbtxt - конфиги запуска
+        ├── client.py - код клиента + тесты на запуск
+        ├── docker-compose.yaml - конфиги для запуска докера
+        ├── Dockerfile - файл для запуска докера
+        ├── infer.py - предсказание модели
+        ├── train.py - обучение модели
+        └── README.md - этот файл
+```
