@@ -24,6 +24,7 @@ def prepare_data(train_file, test_file):
     mat_test = scaler.transform(test.iloc[:, 0:562])
 
     activity_mapping = {activity: i for i, activity in enumerate(df["Activity"].unique())}
+    # print(activity_mapping)
     df["n_Activity"] = df.Activity.map(activity_mapping)
 
     activity_mapping = {
@@ -166,6 +167,24 @@ def main(config: DictConfig):
     plt.xlabel("epoch")
     plt.legend(["train", "test"], loc="upper left")
     plt.savefig(f"{config['graphics_path']['train']}/model_loss.jpg")
+
+    dummy_input_batch = next(iter(val_loader))[0]
+    dummy_input = torch.unsqueeze(dummy_input_batch[0], 0)
+
+    model_path = "mlops-23-autumn/datasets/human_activity_predictions"
+    model_name = "model"
+    torch.onnx.export(
+        model,
+        dummy_input,
+        model_path + "_" + model_name + ".onnx",
+        export_params=True,
+        input_names=["inputs"],
+        output_names=["predictions"],
+        dynamic_axes={
+            "inputs": {0: "BATCH_SIZE"},
+            "predictions": {0: "BATCH_SIZE"},
+        },
+    )
 
 
 if __name__ == "__main__":

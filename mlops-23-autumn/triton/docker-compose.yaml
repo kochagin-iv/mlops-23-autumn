@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  triton_clothing:
+    command: ["--model-repository=/models", "--log-info=1"]
+    build: .
+    shm_size: "4gb"
+    restart: unless-stopped
+    ports:
+      - 8500:8000
+      - 8501:8001
+      - 8502:5002
+    volumes:
+      - ./:/workspace
+      - ./model_repository:/models
+      - ./assets:/assets
+    environment:
+      - LC_ALL=C.UTF-8
+      - lang=C.UTF-8
+    deploy:
+      resources:
+        limits:
+          cpus: "2"

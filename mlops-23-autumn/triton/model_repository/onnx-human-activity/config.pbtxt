@@ -1,0 +1,28 @@
+name: "onnx-human-activity"
+platform: "onnxruntime_onnx"
+max_batch_size: 1024
+
+input [
+    {
+        name: "inputs"
+        data_type: TYPE_FP32
+        dims: [ 562 ]
+    }
+]
+
+output [
+    {
+        name: "predictions"
+        data_type: TYPE_FP32
+        dims: [ 6 ]
+    }
+]
+
+instance_group [
+    {
+        count: 1
+        kind: KIND_CPU
+    }
+]
+
+dynamic_batching { max_queue_delay_microseconds: 100 }
