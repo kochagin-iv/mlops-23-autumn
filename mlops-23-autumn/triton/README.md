@@ -57,7 +57,5 @@ https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphone
         ├── client.py - код клиента + тесты на запуск
         ├── docker-compose.yaml - конфиги для запуска докера
         ├── Dockerfile - файл для запуска докера
-        ├── infer.py - предсказание модели
-        ├── train.py - обучение модели
         └── README.md - этот файл
 ```
