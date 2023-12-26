@@ -1,9 +1,6 @@
 # mlops-23-autumn
 
-Project for my tasks in mlops course, autumn 2023 На данный момент не
-реализована logging и часть с onnx mlflow, в ближайшее время будет добавлена, в
-течение 1-2 дней после дедлайна :(
-
+Project for my tasks in mlops course, autumn 2023
 Порядок работы с репозиторием
 
 1. `git clone`
